@@ -4,7 +4,7 @@
 
 ### Web Server Type & Version Detection
 
-    Web sunucu bilgisi ve versiyon bilgilerini tespit ederek web uygulamalarına yönelik yapılacak saldırılar için yol haritası belirlenebilir. Özellikle versiyondan kaynaklı zafiyetleri hızlıca tespit etmemiz için sunucu adı ve versiyon bilgisini öğrenmek gerekir. Peki web sunucu bilgisini nasıl öğrenebiliriz.
+    Web sunucu bilgisi ve versiyon bilgilerini tespit ederek web uygulamalarına yönelik yapılacak saldırılar için yol haritası belirlenebilir. Özellikle  versiyondan kaynaklı zafiyetleri hızlıca tespit etmemiz için sunucu adı ve versiyon bilgisini öğrenmek gerekir. Peki web sunucu bilgisini nasıl öğrenebiliriz.
     - Web sunucudan dönen başlık bilgilerine bakarak ( whatweb aracı, curl, browser üzerinden görüntüleme vb araçlar kullanılabilir.)
     - Wappalyzer tool kullanılabilir. (chrome, mozilla eklentisi)
     - nmap ile ilgili web sunucu portuna tarama yapılabilir. (-sSVC parameteresi tavsiye edilir.)
