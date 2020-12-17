@@ -1,8 +1,5 @@
 <!-- docs/_sidebar.md -->
 
-- [Turkish](/tr/)
-
-- [English](/en/)
 
 - [**Getting Started**](/)
     

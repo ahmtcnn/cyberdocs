@@ -1,16 +1,12 @@
 <!-- docs/_sidebar.md -->
 
-- [Turkish](/tr/)
-
-- [English](/en/)
-
-- [**Getting Started**](/)
+- [**Başlangıç**](/tr/)
     
-- [**Web Security**](/Web/)
+- [**Web Security**](/tr/Web/)
 
-- [**DDoS**](DDoS/)
+- [**DDoS**](/tr/DDoS/)
 
-- [**Exploit Development**](Exploit_Development/)
+- [**Exploit Geliştirme**](Exploit_Development/)
 
 - [**Network Security**](Network/)
 
