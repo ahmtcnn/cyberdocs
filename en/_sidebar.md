@@ -1,28 +1,28 @@
 <!-- docs/_sidebar.md -->
 
 
-- [**Getting Started**](/)
+- [**Getting Started**](/en/)
     
 - [**Web Security**](/en/Web/)
 
 - [**DDoS**](/en/DDoS/)
 
-- [**Exploit Development**](Exploit_Development/)
+- [**Exploit Development**](/en/Exploit_Development/)
 
-- [**Network Security**](Network/)
+- [**Network Security**](/en/Network/)
 
-- [**Wireless Security**](Wireless/)
+- [**Wireless Security**](/en/Wireless/)
 
-- [**Mobile App Security**](MobileApp/)
+- [**Mobile App Security**](/en/MobileApp/)
 
-- [**Cloud Security**](/Cloud_Security/)
+- [**Cloud Security**](/en/Cloud_Security/)
 
-- [**Social Engineering**](/Social_Enginnering/)
+- [**Social Engineering**](/en/Social_Enginnering/)
 
-- [**Windows**](/Windows/)
+- [**Windows**](/en/Windows/)
 
-- [**Linux**](/Linux/)
+- [**Linux**](/en/Linux/)
 
-- [**Security Products**](/Products/)
+- [**Security Products**](/en/Products/)
 
-- [**Problem/Solutions**](/Problem_Solutions/)
+- [**Problem/Solutions**](/en/Problem_Solutions/)
