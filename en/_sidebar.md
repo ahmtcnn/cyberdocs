@@ -3,9 +3,9 @@
 
 - [**Getting Started**](/)
     
-- [**Web Security**](/Web/)
+- [**Web Security**](/en/Web/)
 
-- [**DDoS**](DDoS/)
+- [**DDoS**](/en/DDoS/)
 
 - [**Exploit Development**](Exploit_Development/)
 
