@@ -5,7 +5,7 @@
 > A Cyber Security documentation site.
 
 - Simple interface
-- Easy to use
+- Easy to search
 - Free to contribute
 
 [GitHub](https://github.com/ahmtcnn/cyberdocs)
