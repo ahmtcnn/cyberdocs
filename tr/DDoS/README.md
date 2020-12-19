@@ -31,8 +31,24 @@
 - **SYN-RECEIVED Time** : Sunucu SYN-RECEIVED durumunda varsayılan olarak belirli bir süre bekler. (Eğer SYN-ACK gelmezse Backlog içerisinde) Bu süre azaltılarak spoof edilen ip lerin Backlog alanını işgal etmesi daha kısa zamana indirgenebilir ve yeni bağlantılar için kısa zamanda yer ayrılabilir. Ancak bu durumda gerçek kullanıcıların bağlantıları etkilenebilir. Ağ hızında yavaşlık olması durumunda gerçek bir kullanıcı bu ayardan etkilenerek bağlantı kuramayabilir.
 - **Recycling half-opened PCBs**: Backlog alanı dolduğu zaman yeni bir bağlantı alınması için hafızada tutulan SYN-RECEIVED durumundaki bir bağlantının time-out olması gerekir. Bu yöntemde ise diğer bağlantıların timeout olması beklenmeden, eğer Backlog full ise en eski Half-open durumundaki connection bırakılarak yenisi alınır. Eğer saldırı hızı yüksek ise veya Backlog alanı küçük ise bu yöntem başarısız olabilir.
 - **SYN Cache** : SYN Cache, gelen paketlerin kaydının tamamen RECEIVED SYN Transimision Control Block (TCB) ile değilde daha küçük bir bilgi ile kaydedilmesini sağlar. Tüm bağlantı sağlanana kadar TCB oluşturulmaz. Gelen SYN paketinden gizli bir bit seçilir, ip adresi ve port numarası ile hashlenir. Bu hash, SYN Cache tekniğinde oluşturulan, half-open bağlantılar için kullanılan tabloya kaydedilir. Her hash bilgisi için belli bir alan vardır ve bu alan dolduğunda en eski hash kaydı silinir. Eğer bu hash bilgilerine ait herhangi birinin bağlantısı tamamlanırsa (3 way handshake) bu bağlantı bilgisi artık Full TCB alanına taşınabilir. 
-- **SYN Cookies**: 
-    
+- **SYN Cookies**: SYN Cookie tekniği günümüzde en efektif yöntemlerden birisidir. Çalışma mantığı, sunucunun istemciye SYN_ACK içerisinde normalde TCP bağlantılarında kullanılan TCP Sequence Number değerini kullanarak istemciyi onaylamak, bu sırada Backlog'da yer tutmayarak kaynak tüketiminin önüne geçmektir.SYN Cookie kullanılan bir senaryoda bağlantı adımları aşağıdaki gibi olur:
+    - İstemci SYN paketi ile bağlantıyı başlatmak ister.
+    - Sunucu gelen syn paketine bakar bazı bilgileri şifreleyerek sequence number oluşturur.
+        * **Sequence Number** : TCP sıra numarasıdır. Karşılıklı gönderilen paketlerin hedefe ulaşıp ulaşmadığını kontrol etmek için kullanılır. Her iki tarafta kendi sıra numarasını belirterek, bir sonraki gelen paketin belirtilen numaranın bir artırılmış olarak gelmesini bekleyerek karşılıklı olarak paketlerin iletilip iletilmediğini kontrol ederler. Daha detaylı anlatım için bakılabilir : [TCP Sequence Number](https://selcuks61.blogspot.com/2009/08/tcp-sra-ve-onay-numaralar-sequence.html)
+
+        ![syn cookie](../../_media/syncookie.png)
+
+        - Şifrelenecek olan numaranın ilk üyesi Timestamp'tır. **Time Stamp** alınır. (T : 5 bit)
+        - İkinci üyemiz **Maximum Segment Size** (MSS).(M : 3 bit)
+        - Son üyemiz S değeri (24 bit), S değeri ise şu bilgilerden elde edilir:
+            - K değeri (şifreleme için kullanılan sabit key değeri)
+            - Pakete ait kaynak ip, kaynak port
+            - Pakete ait hedef ip, hedef port
+                - S = (Şifreleme(K,Kip,Kport,Hip,Hport))
+    - Oluşturulan sequence number SYN-ACK paketine yerleştirilerek gönderilir. Bu durumda Baclog da herhangi bir şey saklanmaz.
+    - İstemciden ACK paketi sequence number bir artırılarak gelir. Sequence number elde edilir. Decrypt edilerek değerler hesaplanır kontrol sağlanır. Değerler doğru ise bağlantı kurulur ve Backlog a aktarılır. 
+
+
 
 
 
