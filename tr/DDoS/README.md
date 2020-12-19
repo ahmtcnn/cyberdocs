@@ -44,7 +44,7 @@
             - K değeri (şifreleme için kullanılan sabit key değeri)
             - Pakete ait kaynak ip, kaynak port
             - Pakete ait hedef ip, hedef port
-                - S = (Şifreleme(K,Kip,Kport,Hip,Hport))
+                - S = (encrypt(K,Kip,Kport,Hip,Hport))
     - Oluşturulan sequence number SYN-ACK paketine yerleştirilerek gönderilir. Bu durumda Baclog da herhangi bir şey saklanmaz.
     - İstemciden ACK paketi sequence number bir artırılarak gelir. Sequence number elde edilir. Decrypt edilerek değerler hesaplanır kontrol sağlanır. Değerler doğru ise bağlantı kurulur ve Backlog a aktarılır. 
 
