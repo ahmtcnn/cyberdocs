@@ -2,7 +2,7 @@
 
 # CyberDocs <small>v0.1</small>
 
-> A Cyber Security documentation website..
+> A Cyber Security documentation website.
 
 - Simple interface
 - Easy to search

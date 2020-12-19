@@ -5,7 +5,7 @@
     
 - [**Web Security**](/en/Web/)
 
-- [**DDoS**](/en/DDoS/)
+- [**DoS (Denial of Service)**](/en/DDoS/)
 
 - [**Exploit Development**](/en/Exploit_Development/)
 

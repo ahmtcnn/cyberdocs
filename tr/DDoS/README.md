@@ -7,7 +7,7 @@
     - Sunucu bu pakete karşılık SYN+ACK paketi ile cevap verir ve bu bağlantı ile ilgili Transimision Control Block (TCB) denilen bir veri yapısı **oluşturur.** Bu yapılar SYN Backlog denilen alanda saklanır. TCP Backlog da sunucu üzerinde hafıza (memory) içerisinde tutulur, alanı kısıtlıdır.
     - İstemci SYN-ACK paketine karşılık ACK paketi yollar ve three way handshake tamamlanır artık veri alışverişi başlayabilir ve TCP Backlog içerisinde var olan bu bağlantıya ait node silinebilir.
 
-    ![SYN Image](../../_media/syn.png)
+    ![SYN Image](https://github.com/ahmtcnn/cyberdocs/tree/master/_media/syn.png)
 
 
 * Syn flood saldırılarında gerçekleşen senaryoya bakacak olursak:
@@ -36,7 +36,7 @@
     - Sunucu gelen syn paketine bakar bazı bilgileri şifreleyerek sequence number oluşturur.
         * **Sequence Number** : TCP sıra numarasıdır. Karşılıklı gönderilen paketlerin hedefe ulaşıp ulaşmadığını kontrol etmek için kullanılır. Her iki tarafta kendi sıra numarasını belirterek, bir sonraki gelen paketin belirtilen numaranın bir artırılmış olarak gelmesini bekleyerek karşılıklı olarak paketlerin iletilip iletilmediğini kontrol ederler. Daha detaylı anlatım için bakılabilir : [TCP Sequence Number](https://selcuks61.blogspot.com/2009/08/tcp-sra-ve-onay-numaralar-sequence.html)
 
-        ![syn cookie](../../_media/syncookie.png)
+        ![syn cookie](https://github.com/ahmtcnn/cyberdocs/tree/master/_media/syncookie.png)
 
         - Şifrelenecek olan numaranın ilk üyesi Timestamp'tır. **Time Stamp** alınır. (T : 5 bit)
         - İkinci üyemiz **Maximum Segment Size** (MSS).(M : 3 bit)
