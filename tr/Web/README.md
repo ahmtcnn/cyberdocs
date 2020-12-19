@@ -4,7 +4,7 @@
 
 # Enumeration & Bilgi Toplama
 
-### Web Server Tip & Versiyon Tespit Etme
+### Web Sunucu Tip & Versiyon Tespit Etme
 
 * Web sunucu bilgileri ve sürüm bilgileri belirlenerek web uygulamalarına yönelik saldırılar için yol haritası belirlenebilir. Sürümün neden olduğu güvenlik açıklarını hızlı bir şekilde tespit edebilmemiz için sunucu adı, sürüm bilgisinin öğrenilmesi gerekmektedir.
 
