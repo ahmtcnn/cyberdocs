@@ -1,67 +1,76 @@
-# Getting Started
+# Web Uygulama Güvenliği
 
-* In this section, Web application enumeration tools, tips and tactics, exploitation types are tried to explain.  
+* Bu bölümde Web uygulaması enumeration araçları, ipuçları ve taktikler, istismar türleri anlatılmaya çalışılmıştır.
 
+# Enumeration & Bilgi Toplama
 
-# Enumeration & Information Gathering
+### Web Server Tip & Versiyon Tespit Etme
 
-### Web Server Type & Version Detection
+* Web sunucu bilgileri ve sürüm bilgileri belirlenerek web uygulamalarına yönelik saldırılar için yol haritası belirlenebilir. Sürümün neden olduğu güvenlik açıklarını hızlı bir şekilde tespit edebilmemiz için sunucu adı, sürüm bilgisinin öğrenilmesi gerekmektedir.
 
-* By determining the web server information and version information, a road map can be determined for attacks against web applications. It is necessary to learn the server name and version information so that we can quickly detect the vulnerabilities caused by the version. So how can we learn the web server information.
+    - Web sunucusundan dönen **başlık bilgilerine** bakılabilir (**whatweb aracı**, **curl**, **tarayıcı incelemesi** vb. araçlar kullanılabilir.)
+    - **Wappalyzer** aracı kullanılabilir. (chrome, mozilla eklentisi)
+    - Web sunucusu portuna tarama **nmap** ile yapılabilir. (**-sSVC** parametreleri önerilir.)
+    - **nmap** ile os tespit parametreleri kullanılarak tahmin yapılabilir.
 
-    - Looking at the **header information** returned from the web server (**whatweb tool**, **curl**, **browser inspect** etc. tools can be used.)
-    - **Wappalyzer** tool can be used. (chrome, mozilla plugin)
-    - Scanning to the web server port can be done with **nmap**. (The **-sSVC** parameter is recommended.)
-    - Prediction can be made by doing **os detection with nmap**.
+### Kullanılan Web Teknolojileri
 
-### Web Technologies in Use
+* Web sunucularında, hazır sistemlerde, frameworklerde veya güncellenmemiş sistemlerde çalışan uygulamalarda çeşitli kritik güvenlik açıkları oluşabilir. Bu açıdan hangi teknolojilerin kullanıldığını öğrenmek oldukça faydalı olabilir.
 
-* Various critical vulnerabilities may occur in applications running on web servers, ready-made systems, frameworks or systems that are not updated. In this respect, it can be very useful to learn what technologies are used. So how can we learn about the technologies that work on the application?
+    - **Whatcms** aracı kullanılabilir. (online)
+    - **Nikto** aracı kullanılabilir.
+    - **Retirejs** aracı kullanılabilir. (güncel olmayan/zafiyetli js dosyalarını tespit etmek)
+    - **Wappalyzer** tarayıcı eklentisi kullaılabilir.
+    - Wordpress uygulamalarıı taramak için **Wpscan** aracı kullanılabilir.
+    - Joomla siteler için **Joomscan** aracı kullanılabilir.
 
-    - **Whatcms** tool can be used. (online)
-    - **Nikto** tool can be used.
-    - **Retirejs** plugin can be used. (to detect outdated js files)
-    - **Wappalyzer** plugin can be used
-    - **Wpscan** can be used to scan wordpress applications.
-    - **Joomscan** can be used for Joomla sites.
+### WAF Tespit Etme
 
-### Firewall Detection
+* Web uygulaması bir web uygulaması güvenlik duvarının arkasında bulunuyorsa, bazı taramalar false pozitif sonuçlar verebilir, düzgün çalışmayabilir ve bu nedenle sağlıklı olmayabilir. Bu nedenle, bir güvenlik duvarının varlığı tespit edilirse, enumeration ve istismar aşamalarında farklı teknikler kullanılabilir.
 
-* If the web application is located behind a web application firewall, some scans may give false positive results, may not work properly, and therefore may not be healthy. Therefore, if the existence of a firewall is detected, different techniques can be used in enumeration vs exploit stages. So how to determine if any firewall is in use?
-
-    - **wafw00f** tool can be used.
-    - Web server **response header information** can be viewed. (waf or the server name might be in headers)
-    - **Whatwaf** tool can be used.
-    - Nmap can be used for banner grabbing and get information from live port.
-
-
-### Ip History Search
-* If web applications are not hosted directly at cloud service providers, web application firewalls will only be active with dns redirection for WAF use. Therefore, requests are forwarded to the real server via WAF with the reverse proxy step. Incorrectly configured servers can be accessed by using the real IP address. At this point the WAF can be bypassed. The real ip address can be used directly or with the dns hosts configuration files. To search ip history of a server, we can use the following applications/tools.
-
-    - **https://securitytrails.com** web site can be used.
-    - **https://www.virustotal.com/gui/** web site can be used.
-    - **https://viewdns.info/iphistory/** web site can be used.
+    - **wafw00f** aracı kullanılabilir
+    - Web sunucusu **header bilgileri** görüntülenebilir. (waf veya sunucu adı başlıklarda olabilir)
+    - **Whatwaf** aracı kullanılabilir.
+    - **Nmap**, ile banner grabbing yapılabilir.
 
 
-### Port scan
-* By scanning the port where the web application is running, information can be collected by the banner grabbing method. Different ports of the ip address pointed to by the web application may be open. It is useful to examine the web server port and other known ports together. Different open ports can lead us learn informations about the server. What can we use for this enumration?
-    - Of course **nmap**.
-        - Nmap with **-sS** means syn scan. This options should used to get more accurate results for port status.
-        - **-sV** parameter use for server detection. Probe open ports to determine service/version info.
-        - nmap **-h** parameter can be used for more information. (**https://nmap.org/book/man-briefoptions.html**)
+### Ip History Araştırması
+* Web uygulamaları doğrudan bulut hizmeti sağlayıcılarında barındırılmıyorsa,  WAF kullanımı için dns yönlendirmesiyle etkin olacaktır. Bu nedenle, istekler reverse proxy ile, WAF aracılığıyla gerçek sunucuya iletilir. Bu durumdaki yanlış yapılandırılmış sunuculara gerçek IP adresi kullanılarak erişilebilir. Bu noktada WAF baypas edilebilir. Gerçek ip adresi doğrudan veya dns host yapılandırma dosyalarıyla kullanılabilir. 
+
+    - **https://securitytrails.com** web sitesi araştırma için kullanılabilir.
+    - **https://www.virustotal.com/gui/** web sitesi araştırma için kullanılabilir.
+    - **https://viewdns.info/iphistory/** web sitesi araştırma için kullanılabilir.
+
+
+### Port Tarama
+* Web uygulamasının çalıştığı portu tarayarak, banner grabbing yöntemi ile bilgi toplanabilir. Web uygulamasının işaret ettiği ip adresinin farklı portları açık olabilir. Web sunucusu bağlantı noktasını ve bilinen diğer bağlantı noktalarını birlikte incelemek faydalıdır. Farklı açık portlar, sunucu hakkında bilgi edinmemize yol açabilir.
+
+    - **nmap**.
+        -**- sS** ile Nmap, SYN taraması anlamına gelir. Bu seçenekler, bağlantı noktası durumu için daha doğru sonuçlar elde etmek için kullanılmalıdır.
+        - ** - sV ** parametresi sürüm tespiti için kullanılır.
+        - **-h** parametresi ile onlarca seçenek gözden geçirilebilir. (**https://nmap.org/book/man-briefoptions.html**)
     
 
-### Directory Search
-* One of the most important enumeration steps is directory browsing. Accessible pages of web applications are the only content that we can scan and search for vulnerabilities. If the configuration files, password-free management interfaces and site archive files are accessible on the server, serious information disclosure and vulnerabilities can be caused. How can we enumerate these files/pages?
+### Dizin Taraması
+* Ne kadar fazla içerik, fonksiyon kullanıcı etkileşimi varsa test edilecek ve zafiyet oluşturabilecek unsurlar o kadar fazla olabilir. Bu durumda tüm olası sayfaları bulmak, test sayfaları veya  açık bırakılmış içerikleri test edebilmek için dizin taramaları yapmak gerekir. Web uygulamalarının erişilebilir sayfaları, güvenlik açıklarını tarayabileceğimiz ve arayabileceğimiz içeriklerdir. Yapılandırma dosyalarına, şifresiz yönetim arayüzlerine ve site arşiv dosyalarına sunucuda erişilebiliyorsa, ciddi bilgi ifşası ve güvenlik açıklarına neden olabilir.
 
-    - Crawlers can be used to enumerate all accessible pages from links. (**Burp suite** crawler can be used)
-    - Directory bruteforce tools can be used. (**Dirsearch**, **wfuzz**, **gobuster**, you are strong as your wordlist)
-    - **robots.txt** file can be viewed
-    - Platform spesific pages should be checked. If the site uses wordpress, web can search for well known WP upload and configuration pages etc. 
+    - Crawlerlar, erişilebilir tüm sayfaları bağlantılardan çıkartmak için kullanılabilir. (**Burp Suite** aracı kullanılabilir)
+    - Dizin bruteforce araçları kullanılabilir. (**Dirsearch**, **wfuzz**, **gobuster**, taramalar kullanılan wordlist kadar etkilidir.)
+    - **robots.txt** dosyaları incelenebilir.
+    - Platforma özel sayfalar kontrol edilebilir. Örneğin wordpress kullanılıyorsa, WP upload ve yapılandırma sayfalarını vb. taranabilir.
 
-### Subdomain Search
+
+### Subdomain Taraması
+* Hedef web sitesine ait birden fazla subdomain olabilir. Bu subdomainler aynı sunucuda host ediliyor veya abi endpointleri oluşturuyor olabilir. Tıpkı dizin taramaları gibi hedefe ait diğer subdomainleri kontrol etmek bilgi toplama/saldırı yüzeyini artırır. 
+    
+    - [Sublist3r](https://github.com/aboul3la/Sublist3r) aracı kullanılabilir. (DNS ve bruteforce tekniklerini kullanır.)
+    - [Virustotal](https://www.virustotal.com/gui/) web uygulaması kullanılabilir.
+    - Herhangi kişisel yazılmış wordlist bazlı tarama aracı kullanılabilir. (Githubda onlarca bulunabilir.)
 
 ### Google Dorks
+* Hedef web uygulamasında yayın yapılan dizinler ve dosyalar bilgi ifşasına yol açabilir. Bruteforce ve crawler yapmanın yanı sıra, google dorklarını kullanarak belirli format, isim, yazı içeren sayfalara hedef adresini kapsayacak şekilde aramalar yapılabilir. 
+    - [Google Dorks](https://www.exploit-db.com/google-hacking-database)
+    - [pentest-tools](https://pentest-tools.com/information-gathering/google-hacking#) web uygulamasında bazı bilindik google dorkları hazır olarak verilmiş. Örnek olarak bakılabilir veya kullanılabilir.
 
 ### Internal Ip/Path Disclosure (HTML Source Code Analysis)
 

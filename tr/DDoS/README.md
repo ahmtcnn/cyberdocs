@@ -55,7 +55,7 @@
 
 
 
-# Referanslar
+# Kaynakça
 - https://www.imperva.com/learn/ddos/syn-flood/  
 - https://tr.wikipedia.org/wiki/SYN_sald%C4%B1r%C4%B1s%C4%B1  
 - https://www.cloudflare.com/learning/ddos/syn-flood-ddos-attack/
@@ -65,3 +65,4 @@
 - https://sites.google.com/site/sireeshajakku/networking/tcp/syn-attach-mitigation
 - https://tools.ietf.org/html/rfc4987#section-3.4   
 - https://www.youtube.com/watch?v=ymttSrEo0R0
+- https://www.youtube.com/watch?v=sLbihU82x7s
