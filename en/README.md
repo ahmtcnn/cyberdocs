@@ -1,3 +1,3 @@
-# Cyber Docs - english
+# Cyber Docs
 
-**Bu proje** siber güvenlik alanındaki konuları teorik, teknik ve pratik açıdan anlatmaya çalışan bir dökümantasyon projesidir.
+** This project ** is a documentation project that tries to explain the issues in the field of cyber security in theoretical, technical and practical terms.

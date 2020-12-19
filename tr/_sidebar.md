@@ -2,26 +2,26 @@
 
 - [**Başlangıç**](/tr/)
     
-- [**Web Security**](/tr/Web/)
+- [**Web Güvenliği**](/tr/Web/)
 
 - [**DDoS**](/tr/DDoS/)
 
 - [**Exploit Geliştirme**](Exploit_Development/)
 
-- [**Network Security**](Network/)
+- [**Network Güvenliği**](Network/)
 
-- [**Wireless Security**](Wireless/)
+- [**Wireless Güvenliği**](Wireless/)
 
-- [**Mobile App Security**](MobileApp/)
+- [**Mobil Uygulama Güvenliği**](MobileApp/)
 
-- [**Cloud Security**](/Cloud_Security/)
+- [**Bulut Güvenliği**](/Cloud_Security/)
 
-- [**Social Engineering**](/Social_Enginnering/)
+- [**Sosyal Mühendislik**](/Social_Enginnering/)
 
 - [**Windows**](/Windows/)
 
 - [**Linux**](/Linux/)
 
-- [**Security Products**](/Products/)
+- [**Güvenlik Ürünleri**](/Products/)
 
-- [**Problem/Solutions**](/Problem_Solutions/)
+- [**Hatalar/Çözümler**](/Problem_Solutions/)
