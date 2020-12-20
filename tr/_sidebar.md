@@ -18,6 +18,8 @@
 
 - [**Sosyal Mühendislik**](/tr/Social_Enginnering/)
 
+- [**Reverse Engineering**](/tr/Reverse_Engineering)
+
 - [**Windows Sistemler**](/tr/Windows/)
 
 - [**Linux Sistemler**](/tr/Linux/)

@@ -19,6 +19,8 @@
 
 - [**Social Engineering**](/en/Social_Enginnering/)
 
+- [**Reverse Engineering**](/en/Reverse_Engineering)
+
 - [**Windows**](/en/Windows/)
 
 - [**Linux**](/en/Linux/)
