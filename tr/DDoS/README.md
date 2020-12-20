@@ -7,7 +7,7 @@
     - Sunucu bu pakete karşılık SYN+ACK paketi ile cevap verir ve bu bağlantı ile ilgili Transimision Control Block (TCB) denilen bir veri yapısı **oluşturur.** Bu yapılar SYN Backlog denilen alanda saklanır. TCP Backlog da sunucu üzerinde hafıza (memory) içerisinde tutulur, alanı kısıtlıdır.
     - İstemci SYN-ACK paketine karşılık ACK paketi yollar ve three way handshake tamamlanır artık veri alışverişi başlayabilir ve TCP Backlog içerisinde var olan bu bağlantıya ait node silinebilir.
 
-    ![SYN Image](https://github.com/ahmtcnn/cyberdocs/tree/master/_media/syn.png)
+![SYN Image](../../_media/syn.png)
 
 
 * Syn flood saldırılarında gerçekleşen senaryoya bakacak olursak:
