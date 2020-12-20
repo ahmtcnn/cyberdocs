@@ -65,7 +65,10 @@
     
     - [Sublist3r](https://github.com/aboul3la/Sublist3r) aracı kullanılabilir. (DNS ve bruteforce tekniklerini kullanır.)
     - [Virustotal](https://www.virustotal.com/gui/) web uygulaması kullanılabilir.
-    - Herhangi kişisel yazılmış wordlist bazlı tarama aracı kullanılabilir. (Githubda onlarca bulunabilir.)
+    - [DNS Dumpster](https://dnsdumpster.com/) web aracı kullanılabilir.
+    - [Amass](https://github.com/OWASP/Amass) aracı kullanılabilir.
+    - Birçok aracın birleştirilerek sunulduğu [nmmapper](https://www.nmmapper.com/sys/tools/subdomainfinder/) kullanılabilir.
+    - Herhangi kişisel yazılmış wordlist bazlı tarama aracı kullanılabilir. (Githubda onlarca araç bulunabilir.)
 
 ### Google Dorks
 * Hedef web uygulamasında yayın yapılan dizinler ve dosyalar bilgi ifşasına yol açabilir. Bruteforce ve crawler yapmanın yanı sıra, google dorklarını kullanarak belirli format, isim, yazı içeren sayfalara hedef adresini kapsayacak şekilde aramalar yapılabilir. 
