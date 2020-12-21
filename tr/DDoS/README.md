@@ -48,7 +48,9 @@
     - Oluşturulan sequence number SYN-ACK paketine yerleştirilerek gönderilir. Bu durumda Baclog da herhangi bir şey saklanmaz.
     - İstemciden ACK paketi sequence number bir artırılarak gelir. Sequence number elde edilir. Decrypt edilerek değerler hesaplanır kontrol sağlanır. Değerler doğru ise bağlantı kurulur ve Backlog a aktarılır. 
 
-# 2. HTTP Flood Saldırıları
+
+
+
 
 
 
