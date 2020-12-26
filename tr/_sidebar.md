@@ -6,7 +6,7 @@
 
 - [**DoS (Hizmet Reddi)⚠️**](/tr/DDoS/)
 
-- [**Exploit Geliştirme**](/tr/Exploit_Development/)
+- [**Exploit / Geliştirme**](/tr/Exploit_Development/)
 
 - [**Network Güvenliği**](/tr/Network/)
 
@@ -23,6 +23,8 @@
 - [**Windows Sistemler**](/tr/Windows/)
 
 - [**Linux Sistemler**](/tr/Linux/)
+
+- [**Buffer Overflow**](/tr/Buffer_Overflow)
 
 - [**Güvenlik Ürünleri**](/tr/Products/)
 
