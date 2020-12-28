@@ -27,4 +27,6 @@
 
 - [**Security Products**](/en/Products/)
 
+- [**Standards**](/en/Standards)
+
 - [**Problem/Solutions**](/en/Problem_Solutions/)

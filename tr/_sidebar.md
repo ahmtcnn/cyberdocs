@@ -18,7 +18,7 @@
 
 - [**Sosyal Mühendislik**](/tr/Social_Enginnering/)
 
-- [**Reverse Engineering**](/tr/Reverse_Engineering)
+- [**Tersine Mühendislik**](/tr/Reverse_Engineering)
 
 - [**Windows Sistemler**](/tr/Windows/)
 
@@ -27,5 +27,9 @@
 - [**Buffer Overflow**](/tr/Buffer_Overflow)
 
 - [**Güvenlik Ürünleri**](/tr/Products/)
+
+- [**Standartlar**](/tr/Standartlar)
+
+- [**HackTheBox**](/tr/Hack_The_Box/)
 
 - [**Hatalar/Çözümler**](/tr/Problem_Solutions/)
