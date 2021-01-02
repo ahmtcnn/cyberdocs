@@ -1,32 +1,32 @@
 <!-- docs/_sidebar.md -->
 
 - [**Başlangıç**](/tr/)
-    
-- [**Web Uygulama Güvenliği**](/tr/Web/)
 
-- [**DoS (Hizmet Reddi)⚠️**](/tr/DDoS/)
+- [**Mobil Uygulama Güvenliği**](/tr/Mobile_App_Sec/)
+
+- [**Web Uygulama Güvenliği**](/tr/Web/)
 
 - [**Exploit / Geliştirme**](/tr/Exploit_Development/)
 
-- [**Network Güvenliği**](/tr/Network/)
-
-- [**Wireless Güvenliği**](/tr/Wireless/)
-
-- [**Mobil Uygulama Güvenliği**](/tr/MobileApp/)
-
-- [**Bulut Güvenliği**](/tr/Cloud_Security/)
+- [**Tersine Mühendislik**](/tr/Reverse_Engineering/)
 
 - [**Sosyal Mühendislik**](/tr/Social_Enginnering/)
 
-- [**Tersine Mühendislik**](/tr/Reverse_Engineering)
+- [**DoS (Hizmet Reddi)**](/tr/DDoS/)
+
+- [**Wireless Güvenliği**](/tr/Wireless/)
+
+- [**Network Güvenliği**](/tr/Network/)
 
 - [**Windows Sistemler**](/tr/Windows/)
+
+- [**Güvenlik Ürünleri**](/tr/Products/)
+
+- [**Bulut Güvenliği**](/tr/Cloud_Security/)
 
 - [**Linux Sistemler**](/tr/Linux/)
 
 - [**Buffer Overflow**](/tr/Buffer_Overflow)
-
-- [**Güvenlik Ürünleri**](/tr/Products/)
 
 - [**Standartlar**](/tr/Standartlar)
 

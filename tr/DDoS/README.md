@@ -49,10 +49,23 @@
     - İstemciden ACK paketi sequence number bir artırılarak gelir. Sequence number elde edilir. Decrypt edilerek değerler hesaplanır kontrol sağlanır. Değerler doğru ise bağlantı kurulur ve Backlog a aktarılır. 
 
 
+# 2. HTTP Flood Saldırısı
+HTTP Flood saldırıları web sunucuya tamamen normal istekler yaparak, yoğun trafik sonucu kaynakların tüketilmesini hedefleyen saldırılarıdır. GET ve POST methodları kullanılabilir. Burada amaç kaynak tüketimi olduğu için web uygulaması üzerinde biraz bilgi toplama aşaması DDoS saldırısını başarıya iletebilir. Web uygulamalarının bazı fonksiyonları çok kaynak tüketmeden hızlıca cevap verebilirken bazıları işlem yaparak, sorgu yaparak kaynak tüketimi yaparlar. Bu durumda bu fonksiyon veya sayfalara karşı HTTP Flood saldırını başlatmak verimi artırabilir saldırı sonucunu değiştirebilir. 
+
+## 2.1 HTTP Flood Araçları
+
+- [GoldenEye](https://github.com/jseidl/GoldenEye) araci  kullanılabilir.
+- [HTTPFlood](https://github.com/Leeon123/golang-httpflood) aracı kullanılabilir.
+- [stressthem](https://www.stressthem.to/) web uygulaması kullanıabilir (NOT FREE)
+- [HULK](https://github.com/grafov/hulk) aracı kullanılabilir.
 
 
+# 2.2 HTTP Flood Önleme/Önlemler
+- HTTP Flood saldırıları normal insan trafiği gibi görünebileği için direkt ve sert önlemler almak normal trafik akışını da etkilecektir. Bu durumda web uygulamaları üzerinde güvenlik sorular vb. challengelar kullanılabilir. Anti DDoS mekanizmaları kullanarak ip reputation check, (zararlı bilinen iplerin blocklanması), trafik profiling vb. teknikler kullanılabilir.
 
 
+# 3. SlowLoris
+SlowLoris servis dışı bırakma saldırılarında amaç, web sunucu ile açılan bağlantıları uzun süre açık (open) durumunda bırakarak, web sunucunun aynı anda (concurrent) açabileceği open connection sayısını doldurmak, bu durumda yeni bağlantılar oluşturamamasını sağlamaktır. 
 
 
 
@@ -68,3 +81,4 @@
 - https://tools.ietf.org/html/rfc4987#section-3.4   
 - https://www.youtube.com/watch?v=ymttSrEo0R0
 - https://www.youtube.com/watch?v=sLbihU82x7s
+- https://en.wikipedia.org/wiki/Slowloris_(computer_security)

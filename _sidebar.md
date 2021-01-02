@@ -1,28 +1,35 @@
 <!-- docs/_sidebar.md -->
 
+- [**Başlangıç**](/tr/)
 
-- [**Getting Started**](/en/)
-    
-- [**Web Security**](/en/Web/)
+- [**Mobil Uygulama Güvenliği**](/tr/MobileApp/)
 
-- [**DDoS**](/en/DDoS/)
+- [**Web Uygulama Güvenliği**](/tr/Web/)
 
-- [**Exploit Development**](/en/Exploit_Development/)
+- [**Exploit / Geliştirme**](/tr/Exploit_Development/)
 
-- [**Network Security**](/en/Network/)
+- [**Tersine Mühendislik**](/tr/Reverse_Engineering)
 
-- [**Wireless Security**](/en/Wireless/)
+- [**Sosyal Mühendislik**](/tr/Social_Enginnering/)
 
-- [**Mobile App Security**](/en/MobileApp/)
+- [**DoS (Hizmet Reddi)**](/tr/DDoS/)
 
-- [**Cloud Security**](/en/Cloud_Security/)
+- [**Wireless Güvenliği**](/tr/Wireless/)
 
-- [**Social Engineering**](/en/Social_Enginnering/)
+- [**Network Güvenliği**](/tr/Network/)
 
-- [**Windows**](/en/Windows/)
+- [**Windows Sistemler**](/tr/Windows/)
 
-- [**Linux**](/en/Linux/)
+- [**Güvenlik Ürünleri**](/tr/Products/)
 
-- [**Security Products**](/en/Products/)
+- [**Bulut Güvenliği**](/tr/Cloud_Security/)
 
-- [**Problem/Solutions**](/en/Problem_Solutions/)
+- [**Linux Sistemler**](/tr/Linux/)
+
+- [**Buffer Overflow**](/tr/Buffer_Overflow)
+
+- [**Standartlar**](/tr/Standartlar)
+
+- [**HackTheBox**](/tr/Hack_The_Box/)
+
+- [**Hatalar/Çözümler**](/tr/Problem_Solutions/)
