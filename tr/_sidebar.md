@@ -22,6 +22,8 @@
 
 - [**Windows Sistemler**](/tr/Windows/)
 
+- [**Kriptoloji**](/tr/Kriptoloji/)
+
 - [**Güvenlik Ürünleri**](/tr/Products/)
 
 - [**Bulut Güvenliği**](/tr/Cloud_Security/)
