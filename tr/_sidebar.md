@@ -12,6 +12,8 @@
 
 - [**Sosyal Mühendislik**](/tr/Social_Enginnering/)
 
+- [**Active Directory**](/tr/Active_Directory/)
+
 - [**DoS (Hizmet Reddi)**](/tr/DDoS/)
 
 - [**Wireless Güvenliği**](/tr/Wireless/)
