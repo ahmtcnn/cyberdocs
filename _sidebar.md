@@ -2,15 +2,19 @@
 
 - [**Başlangıç**](/tr/)
 
-- [**Mobil Uygulama Güvenliği**](/tr/MobileApp/)
+- [**Bilgi Toplama**](/tr/Bilgi_Toplama/)
+
+- [**Mobil Uygulama Güvenliği**](/tr/Mobile_App_Sec/)
 
 - [**Web Uygulama Güvenliği**](/tr/Web/)
 
 - [**Exploit / Geliştirme**](/tr/Exploit_Development/)
 
-- [**Tersine Mühendislik**](/tr/Reverse_Engineering)
+- [**Tersine Mühendislik**](/tr/Reverse_Engineering/)
 
 - [**Sosyal Mühendislik**](/tr/Social_Enginnering/)
+
+- [**Active Directory**](/tr/Active_Directory/)
 
 - [**DoS (Hizmet Reddi)**](/tr/DDoS/)
 
@@ -19,6 +23,8 @@
 - [**Network Güvenliği**](/tr/Network/)
 
 - [**Windows Sistemler**](/tr/Windows/)
+
+- [**Kriptoloji**](/tr/Kriptoloji/)
 
 - [**Güvenlik Ürünleri**](/tr/Products/)
 
