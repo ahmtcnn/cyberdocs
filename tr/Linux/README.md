@@ -195,5 +195,5 @@
 	- cat /root/anaconda-ks.cfg
 
 ## 1.5 Araçlar
-	- unix-privesc-check
-	- linuxprivchecker.py
+* unix-privesc-check
+* linuxprivchecker.py
