@@ -116,3 +116,38 @@
 	![MS08-067 Zafiyeti Somurme](../../_media/WindowsSistemler/MS08-067/MS08-067-msfconsole-zafiyet-somurme.png)
 
 * Bu zafiyete önlem olarak ilk patch 2008 yılında atılmış olsada, farklı sebeplerden dolayı hala eski sunucu işletim sistemleri kullanan kurumlar bulunuyor. Kurumlar bu sunucuların internete erişimini kesip, sunucu üzerinde “Sistem Sıkılaştırma” işlemlerini yaptıktan sonra Networklerinde bu gibi sunucuları barındırmaya devam ediyorlar. Yani bir pentest sırasında, ağa dahil olduktan sonra bu tür eski bir sunucuyla karşılaşabilir ve bu zafiyetin var olup olmadığını kontrol edebilirsiniz.
+
+# 4. Windows Sistemler üzerinde Hak Yükseltme
+
+* Bilgi Toplama
+	- systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
+	- hostname
+	- echo %username%
+	- net users
+	- netstat -ano
+	- schtasks /query /fo LIST /v
+	- tasklist /SVC
+	- net user <username>
+	- ipconfig /all
+	- route print
+
+* Yama Eksiklikleri
+
+* Yapılandırma Eksiklikleri
+	- System32'ye yazma izni
+	- Bütün kullanıcı dizinlerine yazma izni
+	- Exe Hakları
+	- SYSTEM / Administrator olarak koşan servisler
+	- Uygulama(servis) yapılandırma eksiklikleri
+	- accesschk.exe -ucqv Spooler
+	- accesschk.exe -uwcqv "Authenticated Users" *
+
+* Düz Metin Parola Kullanımı Kontrolleri
+	- Dosya
+	- Registry
+
+* Kullanılabilecek Araçlar
+	- Meterpreter (getsystem, bypassuac)
+	- windows-privesc-check
+	- PowerUp
+	- wmic_info.bat
