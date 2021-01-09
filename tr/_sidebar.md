@@ -2,6 +2,8 @@
 
 - [**Başlangıç**](/tr/)
 
+- [**Bilgi Toplama**](/tr/Bilgi_Toplama/)
+
 - [**Mobil Uygulama Güvenliği**](/tr/Mobile_App_Sec/)
 
 - [**Web Uygulama Güvenliği**](/tr/Web/)
