@@ -25,7 +25,7 @@
 	- cat /etc/*-release
 	- cat /etc/lsb-release
 	- cat /etc/redhat-release
-
+	
 * Kernel versiyonu nedir?
 	- cat /proc/version
 	- uname -a

