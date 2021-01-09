@@ -89,7 +89,7 @@
 	- find / -name tftp*
 	- find / -name ftp*
 
-## 1.2 Yapılandırma Eksiklikleri
+## 1.3 Yapılandırma Eksiklikleri
 
 * /root/ klasörüne yazma izni
 * Bütün kullanıcı dizinlerine yazma izni
@@ -182,7 +182,7 @@
 	- find / -perm -o x -type d 2>/dev/null #çalıştırabilme işlemleri
 	- find / \(-perm -o w -perm -o x \) -type d 2>/dev/null #yazabilme ve çalıştırabilme işlemleri
 
-## 1.3 Açık Metin Parola Kullanımı
+## 1.4 Açık Metin Parola Kullanımı
 * Dosyalar
 * Herhangi bir dosyada düz metin kullanıcı adı veya parola var mı?
 	- grep -i user [filename]
@@ -194,6 +194,6 @@
 	- cat /var/lib/mysql/mysql/user.MYD
 	- cat /root/anaconda-ks.cfg
 
-## 1.4 Araçlar
+## 1.5 Araçlar
 	- unix-privesc-check
 	- linuxprivchecker.py
