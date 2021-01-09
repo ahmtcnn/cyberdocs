@@ -1,7 +1,4 @@
-# Denial Of Service Attacks (DoS) - Hizmet Reddi Saldırıları
-* Hizmet reddi saldırıları, uygulma veya sunuculara aşırı istek ve yük bindirerek kaynak tüketimini artırarak cevap veremez hale getirmektir. Herhangi bir sunucu, uygulama, port, iot cihazı vb. akla gelebilecek her türlü hizmet sağlayan bir ürüne Hizmet Reddi saldırıları gerçekleştirilebilir. Günümüzde en yaygın kullanım alanı web uygulamaları ve sunuculardır. Farklı katmanlarda protokollerin çalışma prensibine göre farklı yaklaşımlarla gerçekleştirilebilir.
-
-# 1. Syn Flood Saldırısı
+# Syn Flood Saldırısı
 * Syn flood saldırıları, TCP handshake mekanizmasının sömürülmesi ilkesine dayanır. Normalde bir TCP bağlantısı aşağıdaki gibi gerçekleşir:
     - İstemci sunucuya bağlanmak için SYN paketi yollar. 
     - Sunucu bu pakete karşılık SYN+ACK paketi ile cevap verir ve bu bağlantı ile ilgili Transimision Control Block (TCB) denilen bir veri yapısı **oluşturur.** Bu yapılar SYN Backlog denilen alanda saklanır. TCP Backlog da sunucu üzerinde hafıza (memory) içerisinde tutulur, alanı kısıtlıdır.
@@ -16,14 +13,14 @@
     - Sunucunun yolladığı SYN-ACK paketi istemciye ulaşmaz çünkü kaynak ip adresi değiştirilmiştir. Ancak sunucu bu bağlantıya ait ACK paketini bekler. Bu durumda bağlantı half-open  durumda yani yarı açık durumda kalır.
     - İstemci sürekli olarak bu isteği farklı kaynak ip adresleri ile devam ettirerek sunucunun TCP Backlog alanını doldurur. Bu durumda sunucu artık gelen istekleri reddeder ve sunucuya erişim kesilir.
 
-## 1.1 SYN Flood Araçları
+##  SYN Flood Araçları
 
 *  [hping3](https://github.com/antirez/hping)
 *  [nping](https://github.com/nmap/nmap/tree/master/nping)
 *  [scapy](https://github.com/secdev/scapy) (python kütüphanesi)
     - [örnek araç](https://github.com/EmreOvunc/Python-SYN-Flood-Attack-Tool.git)
 
-## 1.2 SYN Flood Engelleme/Önlemler
+##  SYN Flood Engelleme/Önlemler
    
 - **Filtreleme**:  Router a bir paket geldiğinde, o paketin kaynağını doğrulamak üzere erişmeye çalışır. Eğer o kaynağa erişemiyorsa bunun bir saldırı olma ihtimali yüksek demektir. Bu durumdaki paketlerin kaynak ip adresi engellenerek saldırı engellenmeye çalışılabilir. Ancak efektif bir yöntem değildir. Spoof edilen kaynak ip adresleri erişilebilir de olabilir. 
 
@@ -47,38 +44,3 @@
                 - S = (encrypt(K,Kip,Kport,Hip,Hport))
     - Oluşturulan sequence number SYN-ACK paketine yerleştirilerek gönderilir. Bu durumda Baclog da herhangi bir şey saklanmaz.
     - İstemciden ACK paketi sequence number bir artırılarak gelir. Sequence number elde edilir. Decrypt edilerek değerler hesaplanır kontrol sağlanır. Değerler doğru ise bağlantı kurulur ve Backlog a aktarılır. 
-
-
-# 2. HTTP Flood Saldırısı
-HTTP Flood saldırıları web sunucuya tamamen normal istekler yaparak, yoğun trafik sonucu kaynakların tüketilmesini hedefleyen saldırılarıdır. GET ve POST methodları kullanılabilir. Burada amaç kaynak tüketimi olduğu için web uygulaması üzerinde biraz bilgi toplama aşaması DDoS saldırısını başarıya iletebilir. Web uygulamalarının bazı fonksiyonları çok kaynak tüketmeden hızlıca cevap verebilirken bazıları işlem yaparak, sorgu yaparak kaynak tüketimi yaparlar. Bu durumda bu fonksiyon veya sayfalara karşı HTTP Flood saldırını başlatmak verimi artırabilir saldırı sonucunu değiştirebilir. 
-
-## 2.1 HTTP Flood Araçları
-
-- [GoldenEye](https://github.com/jseidl/GoldenEye) araci  kullanılabilir.
-- [HTTPFlood](https://github.com/Leeon123/golang-httpflood) aracı kullanılabilir.
-- [stressthem](https://www.stressthem.to/) web uygulaması kullanıabilir (NOT FREE)
-- [HULK](https://github.com/grafov/hulk) aracı kullanılabilir.
-
-
-## 2.2 HTTP Flood Engelleme/Önlemler
-- HTTP Flood saldırıları normal insan trafiği gibi görünebileği için direkt ve sert önlemler almak normal trafik akışını da etkilecektir. Bu durumda web uygulamaları üzerinde güvenlik soruları vb. challengelar kullanılabilir. Anti DDoS mekanizmaları kullanarak **ip reputation check**, (zararlı bilinen iplerin blocklanması), **trafik profiling** vb. teknikler kullanılabilir.
-
-
-# 3. SlowLoris
-SlowLoris servis dışı bırakma saldırılarında amaç, web sunucu ile açılan bağlantıları uzun süre açık (open) durumunda bırakarak, web sunucunun aynı anda (concurrent) açabileceği open connection sayısını doldurmak, bu durumda yeni bağlantılar oluşturamamasını sağlamaktır. 
-
-
-
-
-# Kaynakça
-- https://www.imperva.com/learn/ddos/syn-flood/  
-- https://tr.wikipedia.org/wiki/SYN_sald%C4%B1r%C4%B1s%C4%B1  
-- https://www.cloudflare.com/learning/ddos/syn-flood-ddos-attack/
-- https://www.ionos.com/digitalguide/server/security/syn-flood/
-- https://web.cs.hacettepe.edu.tr/~abc/teaching/bil656/presentations/SerhatTurkmen.pdf
-- https://www.net.in.tum.de/fileadmin/TUM/NET/NET-2019-06-1/NET-2019-06-1_14.pdf
-- https://sites.google.com/site/sireeshajakku/networking/tcp/syn-attach-mitigation
-- https://tools.ietf.org/html/rfc4987#section-3.4   
-- https://www.youtube.com/watch?v=ymttSrEo0R0
-- https://www.youtube.com/watch?v=sLbihU82x7s
-- https://en.wikipedia.org/wiki/Slowloris_(computer_security)

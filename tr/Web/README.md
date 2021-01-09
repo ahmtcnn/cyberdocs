@@ -10,8 +10,7 @@
 
     - Web sunucusundan dönen **başlık bilgilerine** bakılabilir (**whatweb aracı**, **curl**, **tarayıcı incelemesi** vb. araçlar kullanılabilir.)
     - **Wappalyzer** aracı kullanılabilir. (chrome, mozilla eklentisi)
-    - Web sunucusu portuna tarama **nmap** ile yapılabilir. (**-sSVC** parametreleri önerilir.)
-    - **nmap** ile os tespit parametreleri kullanılarak tahmin yapılabilir.
+    - Web sunucusu portuna  **nmap** ile tarama yapılabilir.
 
 ### Kullanılan Web Teknolojileri
 
@@ -20,8 +19,8 @@
     - **Whatcms** aracı kullanılabilir. (online)
     - **Nikto** aracı kullanılabilir.
     - **Retirejs** aracı kullanılabilir. (güncel olmayan/zafiyetli js dosyalarını tespit etmek)
-    - **Wappalyzer** tarayıcı eklentisi kullaılabilir.
-    - Wordpress uygulamalarıı taramak için **Wpscan** aracı kullanılabilir.
+    - **Wappalyzer** tarayıcı eklentisi kullanılabilir.
+    - Wordpress uygulamalarını taramak için **Wpscan** aracı kullanılabilir.
     - Joomla siteler için **Joomscan** aracı kullanılabilir.
 
 ### WAF Tespit Etme
@@ -37,7 +36,7 @@
 ### Ip History Araştırması
 * Web uygulamaları doğrudan bulut hizmeti sağlayıcılarında barındırılmıyorsa,  WAF kullanımı için dns yönlendirmesiyle etkin olacaktır. Bu nedenle, istekler reverse proxy ile, WAF aracılığıyla gerçek sunucuya iletilir. Bu durumdaki yanlış yapılandırılmış sunuculara gerçek IP adresi kullanılarak erişilebilir. Bu noktada WAF baypas edilebilir. Gerçek ip adresi doğrudan veya dns host yapılandırma dosyalarıyla kullanılabilir. 
 
-    - **https://securitytrails.com** web sitesi araştırma için kullanılabilir.
+    - **https://securitytrails.com** web sitesi ip verilerini araştırma için kullanılabilir.
     - **https://www.virustotal.com/gui/** web sitesi araştırma için kullanılabilir.
     - **https://viewdns.info/iphistory/** web sitesi araştırma için kullanılabilir.
 
@@ -74,7 +73,7 @@
 * Hedef web uygulamasında yayın yapılan dizinler ve dosyalar bilgi ifşasına yol açabilir. Bruteforce ve crawler yapmanın yanı sıra, google dorklarını kullanarak belirli format, isim, yazı içeren sayfalara hedef adresini kapsayacak şekilde aramalar yapılabilir. 
 
     - [Google Dorks](https://www.exploit-db.com/google-hacking-database)
-    - [pentest-tools](https://pentest-tools.com/information-gathering/google-hacking#) web uygulamasında bazı bilindik google dorkları hazır olarak verilmiş. Örnek olarak bakılabilir veya kullanılabilir.
+    - [pentest-tools](https://pentest-tools.com/information-gathering/google-hacking#) web uygulamasında bazı bilindik google dorkları hazır olarak verilmiş. Örnek olarak kullanılabilir.
 
 ### Internal Ip/Path Disclosure (HTML Source Code Analysis)
 * Hedef Web uygulamarında kaynak kodlarda unutulmuş veya geliştirme ortamında kullanılan sunucu ip adresleri kalmış olabilir. Bunun dışında bazı web sunucuları, HTTP/1.0 ile yapılan isteklere header bilgisi içerisinde domain adı değilde local ip adresleri ile cevap verebilir. Bu durum yerel ip adres bilgisi ifşası olarak değerlendirilebilir. Yerel ip adresleri kurum dışından bilinmezler. Bu durum saldırganın ağ katmanı saldırılarını gerçekleştirmesine yardımcı olabilir.

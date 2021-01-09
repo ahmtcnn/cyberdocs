@@ -1,0 +1,12 @@
+# Kaynakça
+- https://www.imperva.com/learn/ddos/syn-flood/  
+- https://tr.wikipedia.org/wiki/SYN_sald%C4%B1r%C4%B1s%C4%B1  
+- https://www.cloudflare.com/learning/ddos/syn-flood-ddos-attack/
+- https://www.ionos.com/digitalguide/server/security/syn-flood/
+- https://web.cs.hacettepe.edu.tr/~abc/teaching/bil656/presentations/SerhatTurkmen.pdf
+- https://www.net.in.tum.de/fileadmin/TUM/NET/NET-2019-06-1/NET-2019-06-1_14.pdf
+- https://sites.google.com/site/sireeshajakku/networking/tcp/syn-attach-mitigation
+- https://tools.ietf.org/html/rfc4987#section-3.4   
+- https://www.youtube.com/watch?v=ymttSrEo0R0
+- https://www.youtube.com/watch?v=sLbihU82x7s
+- https://en.wikipedia.org/wiki/Slowloris_(computer_security)

