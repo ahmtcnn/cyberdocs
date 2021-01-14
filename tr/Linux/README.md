@@ -195,5 +195,6 @@
 	- cat /root/anaconda-ks.cfg
 
 ## 1.5 Araçlar
-* unix-privesc-check
-* linuxprivchecker.py
+* Bu araçlar kullanılarak yukarıdaki işlemleri tek tek elle yapmamıza gerek kalmadan hızlıca yapılmış olur.
+* unix-privesc-check (https://github.com/pentestmonkey/unix-privesc-check	)
+* linuxprivchecker.py (https://github.com/sleventyeleven/linuxprivchecker/blob/master/linuxprivchecker.py)
