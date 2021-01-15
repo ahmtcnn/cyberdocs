@@ -36,7 +36,7 @@
 
 - [**Standartlar**](/tr/Standartlar)
 
-- [**SCADA Security**]
+- [**SCADA Güvenliği**](/tr/SCADA/)
 
 - [**HackTheBox**](/tr/Hack_The_Box/)
 
