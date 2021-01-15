@@ -36,6 +36,8 @@
 
 - [**Standartlar**](/tr/Standartlar)
 
+- [**SCADA Security**]
+
 - [**HackTheBox**](/tr/Hack_The_Box/)
 
 - [**Hatalar/Çözümler**](/tr/Problem_Solutions/)
