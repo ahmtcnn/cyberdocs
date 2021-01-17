@@ -109,7 +109,7 @@
     - Kullanıcının cookie bilgisini çalmadan, direkt kullanıcı tarafından yapılması istenilen istekler hedef sunucuya gönderilebilir.
     - Onkeypress eventi ile açılan sayfa üzerinde keylogger gibi bilgi toplanabilir istenilen adrese bu bilgiler gönderilebilir.
     - Daha anlatılamayan hayal gücüne veya web uygulaması içeriğine göre bir çok farklı senaryo bu zafiyet exploit edilebilir.
-XSS çok popüler olduğundan dolayı burada aranacak şeyin payloadlar veya payload kaynakları olabileceği düşünüşmüştür.
+Aşağıdaki kaynaklar kullanılabilir.?
     - [Porswigger XSS](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet) adresi kullnılarak hangi element ile hangi eventler tetiklenebilir ve örnekleri incelenebilir.
     - [Payload List](https://github.com/payloadbox/xss-payload-list) ilham alınabilir.
     - [İhtiyaca göre Payload list](https://github.com/ihebski/XSS-Payloads) kullanıabilir.
@@ -124,7 +124,7 @@ XSS çok popüler olduğundan dolayı burada aranacak şeyin payloadlar veya pay
 
 ### Command Injection
 
-### Brute Force
+### Kaba Kuvvet Saldırıları
 
 ### DNS Zone Transfer
 
@@ -132,7 +132,7 @@ XSS çok popüler olduğundan dolayı burada aranacak şeyin payloadlar veya pay
 
 ### Host Header Injection
 
-### SSL Encrytptions Vulnerabilities
+### SSL Şifreleme Zafiyetleri
 
 
 ### Kaynakça

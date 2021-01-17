@@ -27,16 +27,38 @@ Mobil uygulama güvenliği, saldırganın mobil uygulamayı kullanarak saldırı
     - [staCoan](https://github.com/AndroBugs/AndroBugs_Framework) aracı kullanılarak yine apk dosyalarından java kodları elde edilmeye çalışabilir, araç aynı zamanda "key, url, password" vb. keywordlerin yerlerini tespit ederek kolaylıkla incelenmesine olanak tanır.
     - Uygulamanın açılması, kullanılması, veri alışverişi yapılması sonrasında dinamik olarak kaydedilen bilgileri manuel olarak test etmek gerekir. Bu durumda **"adb.exe shell"** komutu ile çalışan telefona/emülatöre bağlanarak "/data/data/paket_adı" yolu takip edilerek kaydedilen tüm string db ve cache bilgileri hassas bilgiler içerme olasılığına karşı incelenmelidir.
 
+</hr>
+
 ## 1.2 Network Analizi
 
-- Burp Proxy ayarlanması
+- **Burp Proxy ayarlanması**
     - Burp sertifikasının export edilip adb ile cihaza yüklenmesi : **"adb push “C:\test.sertifika “/sdcard/”"**
     - Android cihaz üzerinde Settings > additional settings > privacy > certificates >install ile sertifikanın seçilerek yüklenmesi
     - wifi ayarlarından proxy eklenerek burp proxy ilgili ip ve portu işaret edilmesi
     - Burp tarafında **"all interface"** seçeneği ile ilgili portu dinlemek
-- SSL pinning bypass edilmesi
-    - 
+- **SSL pinning bypass edilmesi**
+    - **1. Yöntem Xposed**
+        - [Xposed](https://forum.xda-developers.com/t/official-xposed-for-lollipop-marshmallow-nougat-oreo-v90-beta3-2018-01-29.3034811/) instraller paketinin indirilmesi ve emülatöre/telefona yüklenmesi
+        - Xposed uygulaması üzerinden SSLUnpinning modülünün yüklenmesi
+        - SSLUnpinning uygulamsı üzerinden SSL Pinning'in atlatılması istenen uygulamanın seçilmesi ve test edilmesi.
+    - **2. Yöntem Frida-Objection**
+        - [Frida server](https://github.com/frida/frida/releases/download/14.2.6/frida-server-14.2.6-android-x86.xz) indirilerek emülatör/telefon üzerinde çalıştırılması
+            - binary dosya xz dosyasından çıkartılarak emülatöre yüklenmesi **"adb push frida-server"**
+            - **"adb shell “chmod 755 /data/local/tmp/frida-server”** komutu ile çalıştırma izninin verilmesi
+            - **"adb shell /data/local/tmp/frida-server"** komutu ile frida sunucusunun android cihazda çalıştırılması
+        - python için virtualenv oluşturulması, **"pip3 install objection"** ile objection kütüphanesinin indirilmesi 
+        - virtualenv içerisinde **"frida-ps -U"** komutu ile çalışan uygulama paketlerinden hangi uygulamaya sslpinning bypass yapılması isteniyorsa paket isminin kopyalanması. (Bazen burada hepsi çıkmıyor doylayısıyla adb ile bağlanarak /data/data klasörü altında aradığımız paket ismini bulabiliriz.)
+        - **"objection -g com.ornekapkpaketi.com explore -q"** komutu ile bağlantı kurmak
+        - **"android sslpinning disabled"** komutu ile bypass edilmesi.
+- Sonrasında tüm internet paketlerinin incelenmesi - (Web app gibi test edilmesi)
 
+## 1.3 Dinamik Analiz
+ 
+- Android cihaza adb ile bağlandıktan sonra **"logcat"** komutu ile birlikte paket adı grep lenerek uygulama runtime sırasında üretilen loglar incelenebilir.
+- Uygulamanın açılması sırasında rootlu cihaz tespiti yapılıyor mu, bunun kontrolü yapılabilir.
+- Kullanıcı girişi vb. data girişi sonrasında android dosyalarına hassas bilgiler saklanıyor mu test edilebilir.
+- Export edilmiş Broadcast receiver ların güvenli olup olmadığı test edilebilir.
+... devam edecek
 # 2. IOS Analizi
 
 
@@ -44,3 +66,4 @@ Mobil uygulama güvenliği, saldırganın mobil uygulamayı kullanarak saldırı
 - https://www.synopsys.com/glossary/what-is-mobile-application-security.html
 - https://owasp.org/www-project-mobile-top-10/
 - https://mobexler.com/checklist.htm
+- https://github.com/sensepost/objection/wiki/Screenshots
