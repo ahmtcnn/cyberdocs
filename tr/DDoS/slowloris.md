@@ -1,2 +1,0 @@
-# SlowLoris
-SlowLoris servis dışı bırakma saldırılarında amaç, web sunucu ile açılan bağlantıları uzun süre açık (open) durumunda bırakarak, web sunucunun aynı anda (concurrent) açabileceği open connection sayısını doldurmak, bu durumda yeni bağlantılar oluşturamamasını sağlamaktır. 
